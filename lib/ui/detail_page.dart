@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modularization/bloc/meals_detail_bloc.dart';
 import 'package:flutter_modularization/model/meals.dart';
-import 'package:flutter_modularization/network/api_provider.dart';
 
 class DetailPage extends StatefulWidget {
 
@@ -15,6 +15,20 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
+
+  final bloc = MealsDetailBloc();
+
+  @override
+  void initState() {
+    super.initState();
+    bloc.fetchDetailMeals(widget.idMeal);
+  }
+
+  @override
+  void dispose() {
+    bloc.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -57,8 +71,8 @@ class _DetailPageState extends State<DetailPage> {
   }
 
   getListDetail() {
-    return FutureBuilder(
-        future: ApiProvider().getDetailMeals(widget.idMeal),
+    return StreamBuilder(
+        stream: bloc.detailMeals,
         builder: (context, AsyncSnapshot<MealsResult> snapshot) {
           if (snapshot.hasData) {
             return _showListDetail(
