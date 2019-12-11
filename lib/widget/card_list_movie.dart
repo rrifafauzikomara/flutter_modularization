@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modularization/common/color_helper.dart';
 
@@ -24,8 +25,9 @@ class CardListMovies extends StatelessWidget {
             Container(
               width: 130,
               height: 200,
-              child: Image.network(
-                  image,
+              child: CachedNetworkImage(
+                imageUrl: image,
+                errorWidget: (context, url, error) => Icon(Icons.error),
               ),
             ),
             Container(
