@@ -1,13 +1,13 @@
+
 import 'package:flutter/material.dart';
-import 'package:flutter_modularization/animation/hero_animation.dart';
-import 'package:flutter_modularization/model/meals.dart';
+import 'package:flutter_modularization/model/movie.dart';
 import 'package:flutter_modularization/network/api_provider.dart';
-import 'package:flutter_modularization/ui/detail_page.dart';
+import 'package:flutter_modularization/widget/card_list_movie.dart';
+import 'package:flutter_modularization/widget/chip_genre_movie.dart';
 
 class HomePage extends StatefulWidget {
 
   final String title;
-
   const HomePage({Key key, this.title}) : super(key: key);
 
   @override
@@ -20,78 +20,47 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(widget.title,
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          color: Color.fromRGBO(58, 66, 86, 1.0)
+        ),),
       ),
-      body: getListDesert(),
+      body: getListMovie(),
     );
   }
 
-  getListDesert() {
+  getListMovie() {
     return Container(
-      color: Color.fromRGBO(58, 66, 86, 1.0),
       child: Center(
         child: FutureBuilder(
-          future: ApiProvider().getMealsList('Dessert'),
-          builder: (context, AsyncSnapshot<MealsResult> snapshot) {
+          future: ApiProvider().getMovieList(),
+          builder: (context, AsyncSnapshot<Movie> snapshot) {
             if (snapshot.hasData) {
-              return _showListDessert(snapshot);
+              return showListMovie(snapshot);
             } else if (snapshot.hasError) {
-              return Text(snapshot.error.toString());
+              return Text(snapshot.error.toString(), style: TextStyle(color: Color.fromRGBO(58, 66, 86, 1.0)),);
             }
             return Center(
                 child: CircularProgressIndicator(
-                    valueColor: AlwaysStoppedAnimation<Color>(Colors.white)));
+                    valueColor: AlwaysStoppedAnimation<Color>(Color.fromRGBO(58, 66, 86, 1.0))));
           },
         ),
       ),
     );
   }
 
-  Widget _showListDessert(AsyncSnapshot<MealsResult> snapshot) =>
-      GridView.builder(
-        itemCount: snapshot == null ? 0 : snapshot.data.meals.length,
-        gridDelegate:
-        SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+  Widget showListMovie(AsyncSnapshot<Movie> snapshot) =>
+      ListView.builder(
+        itemCount: snapshot == null ? 0 : snapshot.data.results.length,
         itemBuilder: (BuildContext context, int index) {
-          return GestureDetector(
-            child: Card(
-              elevation: 2.0,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(5))),
-              margin: EdgeInsets.all(10),
-              child: GridTile(
-                child: HeroAnimation(
-                  tag: snapshot.data.meals[index].strMeal,
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        PageRouteBuilder(
-                          transitionDuration: Duration(milliseconds: 777),
-                          pageBuilder: (BuildContext context,
-                              Animation<double> animation,
-                              Animation<double> secondaryAnimation) =>
-                              DetailPage(
-                                  idMeal: snapshot.data.meals[index].idMeal,
-                                  strMeal: snapshot.data.meals[index].strMeal,
-                                  strMealThumb:
-                                  snapshot.data.meals[index].strMealThumb),
-                        ));
-                  },
-                  photo: snapshot.data.meals[index].strMealThumb,
-                ),
-                footer: Container(
-                  color: Colors.white70,
-                  padding: EdgeInsets.all(5.0),
-                  child: Text(
-                    snapshot.data.meals[index].strMeal,
-                    textAlign: TextAlign.center,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.deepOrange),
-                  ),
-                ),
-              ),
-            ),
+          return CardListMovies(
+            image: 'https://image.tmdb.org/t/p/w185${snapshot.data.results[index].posterPath}',
+            title: snapshot.data.results[index].title,
+            vote: snapshot.data.results[index].voteAverage,
+            releaseDate: snapshot.data.results[index].releaseDate,
+            overview: snapshot.data.results[index].overview,
+            genre: snapshot.data.results[index].genreIds.take(3).map(buildGenreChip).toList(),
           );
         },
       );
