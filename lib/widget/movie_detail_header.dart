@@ -9,7 +9,7 @@ class MovieDetailHeader extends StatelessWidget {
   final String title;
   final String imageBanner;
   final String imagePoster;
-  final int rating;
+  final double rating;
 
   const MovieDetailHeader({Key key, this.genre, this.title, this.imageBanner, this.imagePoster, this.rating}) : super(key: key);
 
@@ -20,6 +20,11 @@ class MovieDetailHeader extends StatelessWidget {
       children: [
         Text(
           title,
+          style: TextStyle(
+            color: Color.fromRGBO(58, 66, 86, 1.0),
+            fontSize: 20,
+            fontWeight: FontWeight.bold
+          ),
         ),
         SizedBox(height: 8.0),
         RatingInformation(rating: rating,),

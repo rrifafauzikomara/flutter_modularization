@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class RatingInformation extends StatelessWidget {
 
-  final int rating;
+  final double rating;
 
   const RatingInformation({Key key, this.rating}) : super(key: key);
 

@@ -20,6 +20,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(widget.title,
         style: TextStyle(
@@ -73,9 +74,10 @@ class _HomePageState extends State<HomePage> {
                     return DetailPage(
                       title: snapshot.data.results[index].title,
                       imagePoster: 'https://image.tmdb.org/t/p/w185${snapshot.data.results[index].posterPath}',
-                      rating: 7,
-                      imageBanner: 'https://image.tmdb.org/t/p/w185//xJWPZIYOEFIjZpBL7SVBGnzRYXp.jpg',
+                      rating: double.parse(snapshot.data.results[index].voteAverage),
+                      imageBanner: 'https://image.tmdb.org/t/p/original${snapshot.data.results[index].backdropPath}',
                       genre: snapshot.data.results[index].genreIds.take(3).map(buildGenreChip).toList(),
+                      overview: snapshot.data.results[index].overview,
                     );
                   }
                 ),
