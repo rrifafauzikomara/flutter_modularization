@@ -18,22 +18,31 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            MovieDetailHeader(
-              title: title,
-              imageBanner: imageBanner,
-              imagePoster: imagePoster,
-              rating: rating,
-              genre: genre,
+        child: Stack(
+          children: <Widget>[
+            Column(
+              children: [
+                MovieDetailHeader(
+                  title: title,
+                  imageBanner: imageBanner,
+                  imagePoster: imagePoster,
+                  rating: rating,
+                  genre: genre,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Storyline(overview),
+                ),
+                SizedBox(height: 50.0),
+              ],
             ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Storyline(overview),
+            Positioned(
+              top: 20,
+              left: 5,
+              child: IconButton(icon: Icon(Icons.arrow_back), onPressed: () => Navigator.pop(context)),
             ),
-            SizedBox(height: 50.0),
           ],
-        ),
+        )
       ),
     );
   }
