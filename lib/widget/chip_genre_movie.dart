@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modularization/model/genres.dart';
+
+import 'package:network/network.dart';
 
 Widget buildGenreChip(int id) {
   return Container(

@@ -1,7 +1,11 @@
 library network;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+// model
+export 'model/movie.dart';
+export 'model/genres.dart';
+
+// network
+export 'network/api_provider.dart';
+
+// repository
+export 'repository/repository.dart';

@@ -1,10 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_modularization/bloc/movie_list_bloc.dart';
-import 'package:flutter_modularization/model/movie.dart';
 import 'package:flutter_modularization/ui/detail_page.dart';
 import 'package:flutter_modularization/widget/card_list_movie.dart';
 import 'package:flutter_modularization/widget/chip_genre_movie.dart';
+
+import 'package:network/network.dart';
 
 class HomePage extends StatefulWidget {
 
