@@ -11,9 +11,11 @@ packages:
   bloc:
     dependency: "direct main"
     description:
-      path: bloc
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: ad10c5f25ef7bc8e9abab1cdfb2b6d0118df71f7
+      url: "https://github.com/rrifafauzikomara/bloc_module.git"
+    source: git
     version: "0.0.1"
   boolean_selector:
     dependency: transitive
@@ -112,9 +114,11 @@ packages:
   network:
     dependency: "direct main"
     description:
-      path: network
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "1effdd203a4f96fe8d250594201c5bf6532319fc"
+      url: "https://github.com/rrifafauzikomara/network_module.git"
+    source: git
     version: "0.0.1"
   path:
     dependency: transitive
