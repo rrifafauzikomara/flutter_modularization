@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modularization/model/movie.dart';
 import 'package:flutter_modularization/network/api_provider.dart';
+import 'package:flutter_modularization/ui/detail_page.dart';
 import 'package:flutter_modularization/widget/card_list_movie.dart';
 import 'package:flutter_modularization/widget/chip_genre_movie.dart';
 
@@ -54,13 +55,32 @@ class _HomePageState extends State<HomePage> {
       ListView.builder(
         itemCount: snapshot == null ? 0 : snapshot.data.results.length,
         itemBuilder: (BuildContext context, int index) {
-          return CardListMovies(
-            image: 'https://image.tmdb.org/t/p/w185${snapshot.data.results[index].posterPath}',
-            title: snapshot.data.results[index].title,
-            vote: snapshot.data.results[index].voteAverage,
-            releaseDate: snapshot.data.results[index].releaseDate,
-            overview: snapshot.data.results[index].overview,
-            genre: snapshot.data.results[index].genreIds.take(3).map(buildGenreChip).toList(),
+          return GestureDetector(
+            child: CardListMovies(
+              image: 'https://image.tmdb.org/t/p/w185${snapshot.data.results[index].posterPath}',
+              title: snapshot.data.results[index].title,
+              vote: snapshot.data.results[index].voteAverage,
+              releaseDate: snapshot.data.results[index].releaseDate,
+              overview: snapshot.data.results[index].overview,
+              genre: snapshot.data.results[index].genreIds.take(3).map(buildGenreChip).toList(),
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                  transitionDuration: Duration(milliseconds: 777),
+                  pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
+                    return DetailPage(
+                      title: snapshot.data.results[index].title,
+                      imagePoster: 'https://image.tmdb.org/t/p/w185${snapshot.data.results[index].posterPath}',
+                      rating: 7,
+                      imageBanner: 'https://image.tmdb.org/t/p/w185//xJWPZIYOEFIjZpBL7SVBGnzRYXp.jpg',
+                      genre: snapshot.data.results[index].genreIds.take(3).map(buildGenreChip).toList(),
+                    );
+                  }
+                ),
+              );
+            },
           );
         },
       );
