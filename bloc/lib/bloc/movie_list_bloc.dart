@@ -2,6 +2,8 @@ import 'package:rxdart/rxdart.dart';
 
 import 'package:network/network.dart';
 
+import 'package:repository/repository.dart';
+
 class MovieListBloc {
 
   final _repository = Repository();

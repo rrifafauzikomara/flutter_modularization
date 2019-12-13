@@ -30,6 +30,8 @@ dependencies:
     path: network
   bloc:
     path: bloc
+  repository:
+    path: repository
 
 dev_dependencies:
   flutter_test:

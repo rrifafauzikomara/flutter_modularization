@@ -1,4 +1,4 @@
-name: bloc
+name: repository
 description: A new Flutter package.
 version: 0.0.1
 author:
@@ -10,12 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  rxdart: ^0.18.0
 
   network:
     path: ../network
-  repository:
-    path: ../repository
 
 dev_dependencies:
   flutter_test:

@@ -8,4 +8,4 @@ export 'model/genres.dart';
 export 'network/api_provider.dart';
 
 // repository
-export 'repository/repository.dart';
+//export 'repository/repository.dart';
