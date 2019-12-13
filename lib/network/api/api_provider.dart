@@ -1,8 +1,7 @@
 import 'dart:async';
+import 'package:flutter_modularization/network/model/movie.dart';
 import 'package:http/http.dart' show Client;
 import 'dart:convert';
-
-import 'package:flutter_modularization/model/movie.dart';
 
 class ApiProvider {
   Client client = Client();

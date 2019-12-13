@@ -1,4 +1,4 @@
-import 'package:flutter_modularization/model/movie.dart';
+import 'package:flutter_modularization/network/model/movie.dart';
 import 'package:flutter_modularization/repository/repository.dart';
 import 'package:rxdart/rxdart.dart';
 
