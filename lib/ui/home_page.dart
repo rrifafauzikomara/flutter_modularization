@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_modularization/ui/detail_page.dart';
 import 'package:flutter_modularization/widget/card_list_movie.dart';
 import 'package:flutter_modularization/widget/chip_genre_movie.dart';
-
 import 'package:network/network.dart';
 import 'package:bloc/bloc.dart';
 
@@ -47,7 +45,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  getListMovie() {
+  Widget getListMovie() {
     return Container(
       child: Center(
         child: StreamBuilder(
@@ -59,31 +57,35 @@ class _HomePageState extends State<HomePage> {
               return Text(snapshot.error.toString(), style: TextStyle(color: Color.fromRGBO(58, 66, 86, 1.0)),);
             }
             return Center(
-                child: CircularProgressIndicator(
-                    valueColor: AlwaysStoppedAnimation<Color>(Color.fromRGBO(58, 66, 86, 1.0))));
+              child: CircularProgressIndicator(
+                valueColor: AlwaysStoppedAnimation<Color>(
+                  Color.fromRGBO(58, 66, 86, 1.0),
+                ),
+              ),
+            );
           },
         ),
       ),
     );
   }
 
-  Widget showListMovie(AsyncSnapshot<Movie> snapshot) =>
-      ListView.builder(
-        itemCount: snapshot == null ? 0 : snapshot.data.results.length,
-        itemBuilder: (BuildContext context, int index) {
-          return GestureDetector(
-            child: CardListMovies(
-              image: 'https://image.tmdb.org/t/p/w185${snapshot.data.results[index].posterPath}',
-              title: snapshot.data.results[index].title,
-              vote: snapshot.data.results[index].voteAverage,
-              releaseDate: snapshot.data.results[index].releaseDate,
-              overview: snapshot.data.results[index].overview,
-              genre: snapshot.data.results[index].genreIds.take(3).map(buildGenreChip).toList(),
-            ),
-            onTap: () {
-              Navigator.push(
-                context,
-                PageRouteBuilder(
+  Widget showListMovie(AsyncSnapshot<Movie> snapshot) {
+    return ListView.builder(
+      itemCount: snapshot == null ? 0 : snapshot.data.results.length,
+      itemBuilder: (BuildContext context, int index) {
+        return GestureDetector(
+          child: CardListMovies(
+            image: 'https://image.tmdb.org/t/p/w185${snapshot.data.results[index].posterPath}',
+            title: snapshot.data.results[index].title,
+            vote: snapshot.data.results[index].voteAverage,
+            releaseDate: snapshot.data.results[index].releaseDate,
+            overview: snapshot.data.results[index].overview,
+            genre: snapshot.data.results[index].genreIds.take(3).map(buildGenreChip).toList(),
+          ),
+          onTap: () {
+            Navigator.push(
+              context,
+              PageRouteBuilder(
                   transitionDuration: Duration(milliseconds: 777),
                   pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
                     return DetailPage(
@@ -95,10 +97,12 @@ class _HomePageState extends State<HomePage> {
                       overview: snapshot.data.results[index].overview,
                     );
                   }
-                ),
-              );
-            },
-          );
-        },
-      );
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+
 }
