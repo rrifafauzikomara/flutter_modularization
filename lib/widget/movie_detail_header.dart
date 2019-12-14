@@ -41,7 +41,7 @@ class MovieDetailHeader extends StatelessWidget {
         ),
       ],
     );
-
+    // poster
     return Stack(
       children: [
         Padding(

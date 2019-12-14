@@ -30,12 +30,14 @@ class CardListMovies extends StatelessWidget {
                 errorWidget: (context, url, error) => Icon(Icons.error),
               ),
             ),
+            // content
             Container(
               width: 260,
               padding: EdgeInsets.all(10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
+                  // header
                   Container(
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
@@ -94,6 +96,7 @@ class CardListMovies extends StatelessWidget {
                         SizedBox(
                           width: 10,
                         ),
+                        // title and release date
                         Flexible(
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -121,6 +124,7 @@ class CardListMovies extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
+                  // genre
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
@@ -131,6 +135,7 @@ class CardListMovies extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
+                  // description
                   Container(
                     width: 360,
                     child: Text(
@@ -142,7 +147,7 @@ class CardListMovies extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

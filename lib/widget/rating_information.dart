@@ -1,24 +1,18 @@
 import 'package:flutter/material.dart';
 
 class RatingInformation extends StatelessWidget {
-
   final double rating;
-
   const RatingInformation({Key key, this.rating}) : super(key: key);
-
   Widget _buildRatingBar(ThemeData theme) {
     var stars = <Widget>[];
-
     for (var i = 1; i <= 5; i++) {
       var color = i <= rating ? theme.accentColor : Colors.black12;
       var star = Icon(
         Icons.star,
         color: color,
       );
-
       stars.add(star);
     }
-
     return Row(children: stars);
   }
 
@@ -27,7 +21,6 @@ class RatingInformation extends StatelessWidget {
     var theme = Theme.of(context);
     var textTheme = theme.textTheme;
     var ratingCaptionStyle = textTheme.caption.copyWith(color: Colors.black45);
-
     var numericRating = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -46,7 +39,6 @@ class RatingInformation extends StatelessWidget {
         ),
       ],
     );
-
     var starRating = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -61,7 +53,6 @@ class RatingInformation extends StatelessWidget {
         ),
       ],
     );
-
     return Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [

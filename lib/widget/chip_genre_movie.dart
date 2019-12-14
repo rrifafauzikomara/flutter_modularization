@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:network/network.dart';
 
 Widget buildGenreChip(int id) {
@@ -11,7 +10,8 @@ Widget buildGenreChip(int id) {
       style: TextStyle(fontSize: 12),
     ),
     decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey),
-        borderRadius: BorderRadius.circular(20)),
+      border: Border.all(color: Colors.grey),
+      borderRadius: BorderRadius.circular(20),
+    ),
   );
 }
