@@ -9,5 +9,5 @@
 ### Theme
 
 <pre>
-<img src="image/materi1.png" width="600" height="460">
+<img src="image/materi1.png" width="800" height="400">
 </pre>
