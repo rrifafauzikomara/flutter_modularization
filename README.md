@@ -11,3 +11,27 @@
 <pre>
 <img src="image/materi1.png" width="850" height="500">
 </pre>
+
+### Branch Master (Basic)
+
+<pre>
+<img src="image/materi2.png" width="850" height="500">
+</pre>
+
+### Branch Bloc (Using Pattern / State Management)
+
+<pre>
+<img src="image/materi3.png" width="850" height="500">
+</pre>
+
+### Branch Local (Unpublish)
+
+<pre>
+<img src="image/materi4.png" width="850" height="500">
+</pre>
+
+### Branch Network (Unpublish)
+
+<pre>
+<img src="image/materi5.png" width="850" height="500">
+</pre>
