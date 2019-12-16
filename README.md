@@ -2,6 +2,10 @@
 
 Link slide <a href="https://docs.google.com/presentation/d/1Sngu8iRVzfYG5IETJq7kWVOidOrNQYcPE8VbgEZAa5E/edit?usp=sharing">here</a>
 
+BLoC module <a href="https://github.com/rrifafauzikomara/bloc_module">here</a>
+
+Network module <a href="https://github.com/rrifafauzikomara/network_module">here</a>
+
 ### Screenshot
 
 <pre>
