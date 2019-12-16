@@ -51,4 +51,4 @@
 
 * **R Rifa Fauzi Komara**
 
-Jangan lupa untuk follow dan ★
+Don't forget to follow and give me a ★
