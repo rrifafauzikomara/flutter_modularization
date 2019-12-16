@@ -1,10 +1,10 @@
 # Flutter Modularization In Several Ways
 
-Link slide <a href="https://docs.google.com/presentation/d/1Sngu8iRVzfYG5IETJq7kWVOidOrNQYcPE8VbgEZAa5E/edit?usp=sharing">here</a>
+### Resource
 
-BLoC module <a href="https://github.com/rrifafauzikomara/bloc_module">here</a>
-
-Network module <a href="https://github.com/rrifafauzikomara/network_module">here</a>
+* [x] Link slide <a href="https://docs.google.com/presentation/d/1Sngu8iRVzfYG5IETJq7kWVOidOrNQYcPE8VbgEZAa5E/edit?usp=sharing">here</a>
+* [x] BLoC module <a href="https://github.com/rrifafauzikomara/bloc_module">here</a>
+* [x] Network module <a href="https://github.com/rrifafauzikomara/network_module">here</a>
 
 ### Screenshot
 
@@ -41,3 +41,14 @@ Network module <a href="https://github.com/rrifafauzikomara/network_module">here
 <pre>
 <img src="image/materi5.png" width="850" height="500">
 </pre>
+
+### References
+
+* [x] Using <a href="https://flutter.dev/docs/development/packages-and-plugins/using-packages">package</a>
+* [x] Developing <a href="https://flutter.dev/docs/development/packages-and-plugins/developing-packages">package & plugins</a>
+
+## Author
+
+* **R Rifa Fauzi Komara**
+
+Jangan lupa untuk follow dan ★
