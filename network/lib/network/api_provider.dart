@@ -5,7 +5,7 @@ import 'package:network/model/movie.dart';
 
 class ApiProvider {
   Client client = Client();
-  static final _apiKey = '802b2c4b88ea1183e50e6b285a27696e';
+  static final _apiKey = 'YOUR_API_KEY';
   static final String _baseUrl = 'http://api.themoviedb.org/3/movie';
 
   Future<Movie> getMovieList() async {
