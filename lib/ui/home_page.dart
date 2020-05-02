@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter_modularization/model/movie.dart';
-import 'package:flutter_modularization/network/api_provider.dart';
+import 'package:flutter_modularization/network/api/api_provider.dart';
+import 'package:flutter_modularization/network/model/movie.dart';
 import 'package:flutter_modularization/ui/detail_page.dart';
 import 'package:flutter_modularization/widget/card_list_movie.dart';
 import 'package:flutter_modularization/widget/chip_genre_movie.dart';
