@@ -14,6 +14,9 @@
 * [x] BLoC module <a href="https://github.com/rrifafauzikomara/bloc_module">here</a>
 * [x] Network module <a href="https://github.com/rrifafauzikomara/network_module">here</a>
 
+### Need more complex examples in implementing modularization?
+[Here](https://github.com/rrifafauzikomara/MovieCatalogue) you go!
+
 ### Screenshot 📸
 
 <pre>
