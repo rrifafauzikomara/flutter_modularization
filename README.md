@@ -8,14 +8,13 @@
 [![platform](https://img.shields.io/badge/platform-Flutter-blue.svg)](https://flutter.dev/)
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/rrifafauzikomara/flutter_modularization)
 
-### Resource 🔥
+### Resources 🔥
  
 * [x] Link slide <a href="https://docs.google.com/presentation/d/1Sngu8iRVzfYG5IETJq7kWVOidOrNQYcPE8VbgEZAa5E/edit?usp=sharing">here</a>
 * [x] BLoC module <a href="https://github.com/rrifafauzikomara/bloc_module">here</a>
 * [x] Network module <a href="https://github.com/rrifafauzikomara/network_module">here</a>
 
-### Need more complex examples in implementing modularization?
-[Here](https://github.com/rrifafauzikomara/MovieCatalogue) you go! 🔥
+Need more complex resources in implementing modularization? [Here](https://github.com/rrifafauzikomara/MovieCatalogue) you go! 🔥
 
 ### Screenshot 📸
 
