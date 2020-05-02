@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modularization/widget/arc_banner_image.dart';
-import 'package:flutter_modularization/widget/poster.dart';
-import 'package:flutter_modularization/widget/rating_information.dart';
+import 'package:flutter_modularization/ui/widget/poster.dart';
+import 'package:flutter_modularization/ui/widget/rating_information.dart';
+
+import 'arc_banner_image.dart';
 
 class MovieDetailHeader extends StatelessWidget {
 

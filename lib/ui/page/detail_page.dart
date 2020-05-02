@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modularization/widget/movie_detail_header.dart';
-import 'package:flutter_modularization/widget/story_line.dart';
+import 'package:flutter_modularization/ui/widget/movie_detail_header.dart';
+import 'package:flutter_modularization/ui/widget/story_line.dart';
 
 class DetailPage extends StatelessWidget {
 
