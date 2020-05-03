@@ -56,8 +56,9 @@ Need more complex resources in implementing modularization? [Here](https://githu
 
 ### References 🛠
 
-* [x] Using <a href="https://flutter.dev/docs/development/packages-and-plugins/using-packages">package</a>
-* [x] Developing <a href="https://flutter.dev/docs/development/packages-and-plugins/developing-packages">package & plugins</a>
+* [Using Package](https://flutter.dev/docs/development/packages-and-plugins/using-packages)
+* [Developing Package & Plugin](https://flutter.dev/docs/development/packages-and-plugins/developing-packages)
+
 
 ## Author
 
