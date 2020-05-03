@@ -10,10 +10,10 @@
 
 ### Resources 🔥
  
-[Medium](https://medium.com/@rifafauzi6/mastering-flutter-modularization-in-several-ways-c5db5ff5a54a)
-[Slide](https://docs.google.com/presentation/d/1Sngu8iRVzfYG5IETJq7kWVOidOrNQYcPE8VbgEZAa5E/edit?usp=sharing)
-[BLoC Module](https://github.com/rrifafauzikomara/bloc_module)
-[Network Module](https://github.com/rrifafauzikomara/network_module)
+* [Medium](https://medium.com/@rifafauzi6/mastering-flutter-modularization-in-several-ways-c5db5ff5a54a)
+* [Slide](https://docs.google.com/presentation/d/1Sngu8iRVzfYG5IETJq7kWVOidOrNQYcPE8VbgEZAa5E/edit?usp=sharing)
+* [BLoC Module](https://github.com/rrifafauzikomara/bloc_module)
+* [Network Module](https://github.com/rrifafauzikomara/network_module)
 
 
 Need more complex resources in implementing modularization? [Here](https://github.com/rrifafauzikomara/MovieCatalogue) you go! 🔥
