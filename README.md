@@ -10,6 +10,7 @@
 
 ### Resources 🔥
  
+* [Medium](https://medium.com/flutter-community/mastering-flutter-modularization-in-several-ways-f5bced19101a)
 * [Slide](https://docs.google.com/presentation/d/1Sngu8iRVzfYG5IETJq7kWVOidOrNQYcPE8VbgEZAa5E/edit?usp=sharing)
 * [BLoC Module](https://github.com/rrifafauzikomara/bloc_module)
 * [Network Module](https://github.com/rrifafauzikomara/network_module)
