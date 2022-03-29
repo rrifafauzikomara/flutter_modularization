@@ -1,15 +1,19 @@
 import 'dart:async';
-import 'package:http/http.dart' show Client;
 import 'dart:convert';
+
+import 'package:http/http.dart' show Client;
 import 'package:network/model/movie.dart';
 
 class ApiProvider {
   Client client = Client();
+
+  //TODO: Add your api key here
   static final _apiKey = 'YOUR_API_KEY';
   static final String _baseUrl = 'http://api.themoviedb.org/3/movie';
 
   Future<Movie> getMovieList() async {
-    final response = await client.get("$_baseUrl/popular?api_key=$_apiKey");
+    final url = Uri.parse("$_baseUrl/popular?api_key=$_apiKey");
+    final response = await client.get(url);
     if (response.statusCode == 200) {
       return Movie.fromJson(json.decode(response.body));
     } else {
