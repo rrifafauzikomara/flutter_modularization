@@ -4,14 +4,20 @@ import 'package:flutter_modularization/widget/poster.dart';
 import 'package:flutter_modularization/widget/rating_information.dart';
 
 class MovieDetailHeader extends StatelessWidget {
-
   final List<Widget> genre;
   final String title;
   final String imageBanner;
   final String imagePoster;
   final double rating;
 
-  const MovieDetailHeader({Key key, this.genre, this.title, this.imageBanner, this.imagePoster, this.rating}) : super(key: key);
+  const MovieDetailHeader({
+    Key? key,
+    required this.genre,
+    required this.title,
+    required this.imageBanner,
+    required this.imagePoster,
+    required this.rating,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,21 +27,21 @@ class MovieDetailHeader extends StatelessWidget {
         Text(
           title,
           style: TextStyle(
-            color: Color.fromRGBO(58, 66, 86, 1.0),
-            fontSize: 20,
-            fontWeight: FontWeight.bold
-          ),
+              color: Color.fromRGBO(58, 66, 86, 1.0),
+              fontSize: 20,
+              fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 8.0),
-        RatingInformation(rating: rating,),
+        RatingInformation(
+          rating: rating,
+        ),
         SizedBox(height: 12.0),
         Padding(
           padding: EdgeInsets.only(right: 8.0),
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-              children:
-              genre,
+              children: genre,
             ),
           ),
         ),

@@ -3,7 +3,6 @@ import 'package:flutter_modularization/widget/movie_detail_header.dart';
 import 'package:flutter_modularization/widget/story_line.dart';
 
 class DetailPage extends StatelessWidget {
-
   final List<Widget> genre;
   final String title;
   final String imageBanner;
@@ -11,7 +10,15 @@ class DetailPage extends StatelessWidget {
   final double rating;
   final String overview;
 
-  const DetailPage({Key key, this.genre, this.title, this.imageBanner, this.imagePoster, this.rating, this.overview}) : super(key: key);
+  const DetailPage({
+    Key? key,
+    required this.genre,
+    required this.title,
+    required this.imageBanner,
+    required this.imagePoster,
+    required this.rating,
+    required this.overview,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,12 +46,13 @@ class DetailPage extends StatelessWidget {
             Positioned(
               top: 20,
               left: 5,
-              child: IconButton(icon: Icon(Icons.arrow_back), onPressed: () => Navigator.pop(context)),
+              child: IconButton(
+                  icon: Icon(Icons.arrow_back),
+                  onPressed: () => Navigator.pop(context)),
             ),
           ],
-        )
+        ),
       ),
     );
   }
-
 }
