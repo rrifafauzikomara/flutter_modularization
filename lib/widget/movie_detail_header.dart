@@ -11,7 +11,14 @@ class MovieDetailHeader extends StatelessWidget {
   final String imagePoster;
   final double rating;
 
-  const MovieDetailHeader({Key key, this.genre, this.title, this.imageBanner, this.imagePoster, this.rating}) : super(key: key);
+  const MovieDetailHeader({
+    Key? key,
+    required this.genre,
+    required this.title,
+    required this.imageBanner,
+    required this.imagePoster,
+    required this.rating,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +28,8 @@ class MovieDetailHeader extends StatelessWidget {
         Text(
           title,
           style: TextStyle(
-            color: Color.fromRGBO(58, 66, 86, 1.0),
-            fontSize: 20,
+              color: Color.fromRGBO(58, 66, 86, 1.0),
+              fontSize: 20,
             fontWeight: FontWeight.bold
           ),
         ),

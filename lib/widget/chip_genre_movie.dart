@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:network/network.dart';
 
 Widget buildGenreChip(int id) {
@@ -7,7 +6,7 @@ Widget buildGenreChip(int id) {
     margin: EdgeInsets.only(right: 10),
     padding: EdgeInsets.all(8),
     child: Text(
-      Genres.genres[id],
+      '${Genres.genres[id]}',
       style: TextStyle(fontSize: 12),
     ),
     decoration: BoxDecoration(
